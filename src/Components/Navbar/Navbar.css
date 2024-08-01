@@ -25,27 +25,57 @@
 
 .nav-right{
     display: flex;
+}
+
+.nav-btns{
+    display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
-.nav-right p{
-    padding: 0 10px;
-    border-radius: 10px;
+.nav-btns p{
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
-.nav-right p:hover{
+.nav-btns p {
+    display: inline-block;
+    position: relative;
+}
+  
+.nav-btns p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    border-radius: 30px;
+    bottom: 1px;
+    left: 0;
     background-color: var(--primary-color);
-    color: var(--text-color-primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
+
+.nav-btns p:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 
 .sign-btn{
     background-color: var(--primary-color);
-    color: white;
-    padding: 0px 10px;
-    border-radius: 10px;
+    color: var(--text-color-primary);
+    padding: 0px 20px;
+    margin-left: 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
-.nav-right a.active-nav{
+
+.nav-btns a.active-nav{
    background-color: var(--primary-color);
    color: white;
    padding: 0px 10px;
