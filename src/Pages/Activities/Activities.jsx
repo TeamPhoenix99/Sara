@@ -8,14 +8,14 @@ import { StoreContext } from '../../contexts/StoreContext';
 
 export const Activities = () => {
 
-  const {apiData} = useContext(StoreContext); 
+  const {apiData} = useContext(StoreContext);
 
   return (
     <div>
       <TopCategory img={activitieshero} Utext="Try Something New" Ltext="With HolidayNepal"/>
       <div className='search'>
         <h1>Activities</h1>
-        <input type="text" placeholder='Enter activities'  />
+        <input type="text" placeholder='Enter activities'/>
         <CiSearch />
         </div>
         <div className='place-grid'>
