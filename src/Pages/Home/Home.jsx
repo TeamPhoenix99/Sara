@@ -7,7 +7,6 @@ export const Home = () => {
   const { apiData } = useContext(StoreContext);
   return (
     <div>
-        { console.log(apiData) }
         <Main/>
     </div>
   )

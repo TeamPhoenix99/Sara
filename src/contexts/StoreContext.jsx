@@ -11,13 +11,10 @@ export const StoreContextPrvider = (props) => {
     useEffect(()=>{
         
         const fetchData = async ()=> {
-             
             let data = await getData();
             setApiData(data);
         }
         fetchData()
-        
-
     },[]);
 
 
