@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { storeContext } from "../../Context/StoreContext";
 import {MultiOptionSelector, SimpleOptionsSelector} from './OptionsInput';
+import { StoreContext } from '../../contexts/StoreContext';
 
 
 export const Form = () => {
@@ -16,7 +17,7 @@ export const Form = () => {
   const [accommodation, setAccommodation] = useState('');
   const [foods, setFoods] = useState('');
 
-  const { categoryPlaces, handleLoadMore, count, allPlaces } = useContext(storeContext);
+  const {  } = useContext(StoreContext);
   
   const places_options = categoryPlaces['places']
   const activities_options = categoryPlaces['activities']
