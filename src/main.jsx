@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom';
-import { StoreContextPrvider } from './contexts/StoreContext.jsx';
+import { StoreContextProvider } from './contexts/StoreContext.jsx';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <StoreContextPrvider>
+   <StoreContextProvider>
      <BrowserRouter>
         <App />
       </BrowserRouter>
-    </StoreContextPrvider>
+    </StoreContextProvider>
+   
     
-  </React.StrictMode>,
+  </React.StrictMode>
 )
