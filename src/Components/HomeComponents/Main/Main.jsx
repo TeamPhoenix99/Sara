@@ -1,8 +1,11 @@
 import React from 'react'
 import './Main.css'
+import { useNavigate } from 'react-router-dom'
 
 
 export const Main = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='main'>
       <div className="main-left">
@@ -13,7 +16,7 @@ export const Main = () => {
             Using our versitile AI you can design  packages to your desire. 
           </p>
         </div>
-        <button className='ai-btn'>Create trip with AI</button>
+        <button className='ai-btn' onClick={()=>navigate('/form')}>Create trip with AI</button>
       </div>
       <div className="main-right">
         <div className="frames">

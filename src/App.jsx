@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Form, Route, Routes } from "react-router-dom"
 import { Home } from "./Pages/Home/Home"
 import { Place } from "./Pages/Place/Place"
 import { Event } from "./Pages/Event/Event"
@@ -20,6 +20,7 @@ function App() {
          <Route path="/event" element={<Event/>} />
          <Route path="/activity" element={<Activities/>}/>
          <Route path="/package" element={<Package />}/>
+         <Route path="/form" element={<Form />}/>
       </Routes>
       <Footer/>
     </>
