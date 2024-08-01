@@ -1,5 +1,6 @@
 :root{
-    --primary-color: #f15819;
+    --primary-color: #fc8019;
+    --primary-color-hover: #ff4d00;
 }
 *{
     padding: 0;
