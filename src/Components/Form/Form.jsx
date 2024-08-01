@@ -2,7 +2,6 @@ import React, { useState, useContext, act } from 'react';
 import './Form.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { storeContext } from "../../Context/StoreContext";
 import {MultiOptionSelector, SimpleOptionsSelector} from './OptionsInput';
 import { StoreContext } from '../../contexts/StoreContext';
 
@@ -17,10 +16,17 @@ export const Form = () => {
   const [accommodation, setAccommodation] = useState('');
   const [foods, setFoods] = useState('');
 
-  const {  } = useContext(StoreContext);
+  const {apiData} = useContext(StoreContext);
   
-  const places_options = categoryPlaces['places']
-  const activities_options = categoryPlaces['activities']
+  const places_options = []
+  const activities_options = []
+
+  apiData.map((e)=>{
+    if(e['type']=='place') places_options.push(e)
+    if(e['type']=='activities') places_options.push(e)
+  })
+  console.log(typeof(apiData))
+
   const themes_options = [
     {
       "name": "Commercial",
