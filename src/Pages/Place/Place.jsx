@@ -18,7 +18,16 @@ export const Place = () => {
         <input type="text" placeholder='Enter places'  />
         <CiSearch />
         </div>
-      <Category />
+        <div className='place-grid'>
+        {
+          apiData.map((place,index) => (
+            <div key={index}>
+             { place.type === 'place' ? <Category name={place.name} rating={place.rating} img={place.image} /> : <></>}
+            </div>
+          ))
+        }
+        </div>
+         <button className='load-btn'>Load More</button>
     </div>
   )
 }

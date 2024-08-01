@@ -28,14 +28,3 @@
     margin-top: 30px;
     cursor: pointer;
 }
-.load-btn{
-    display: flex;
-    align-items: center;
-    width: max-content;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: white;
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    cursor: pointer;
-}
