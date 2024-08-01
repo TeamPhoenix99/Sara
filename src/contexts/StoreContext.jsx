@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import {getData} from '../assets/data'
-import { Place } from "../Pages/Place/Place";
+
 
 
 export const StoreContext = createContext(null);

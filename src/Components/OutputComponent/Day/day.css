@@ -1,0 +1,17 @@
+.plan{
+    display: flex;
+    gap: 10px;
+}
+.plan img{
+    height: 100px;
+    width: 300px;
+    object-fit: cover;
+}
+.rating-view{
+    display: flex;
+    gap: 20px;
+}
+.rate{
+    display: flex;
+    align-items: center;
+}
