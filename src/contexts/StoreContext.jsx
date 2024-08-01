@@ -1,17 +1,27 @@
-import React, { createContext, useEffect } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import {getData} from '../assets/data'
 
 
-const StoreContext = createContext(null);
+export const StoreContext = createContext(null);
 
 export const StoreContextPrvider = (props) => {
 
-    useEffect(()=>{
+    const [apiData,setApiData] = useState('')
 
+    useEffect(()=>{
+        
+        const fetchData = async ()=> {
+             
+            let data = await getData();
+            setApiData(data);
+        }
+        fetchData()
+        
 
     },[]);
 
 
-    const conextValue = {}
+    const conextValue = {apiData}
      return(
         <StoreContext.Provider value={ conextValue }>
             {props.children}
