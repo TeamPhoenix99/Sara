@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50px;
+}
+.social-icon{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.footer-list{
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-desc{
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+}
+.copy-right{
+    margin:40px 0px 10px 0px  ;
+}

@@ -1,0 +1,36 @@
+.top-category{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    overflow: hidden;  
+}
+
+.category-img{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+    width: 100%;
+}
+
+.category-img img{
+    position: absolute;
+    /* top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.category-desc{
+    position: absolute;
+    bottom: 10vh;
+    left: 5vw;
+    color: white;
+    text-shadow: 2px 2px 2px #000;    
+}
+

@@ -1,0 +1,62 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-left{
+    width: 50%;
+    margin:100px 100px;
+}
+.main-desc p:nth-child(1){
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.main-desc h1{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.main-desc p:last-child{
+    font-size: 17px;
+   
+}
+.main-desc h1 {
+    margin-bottom: 20px;
+}
+.main-desc h1 span{
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.ai-btn{
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* Css for Frames */
+.frames{
+    margin-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+.frame1,.frame2,.frame3,.frame4{
+   width: 80px;
+   height: 300px;
+   border: 1px solid black;
+   border-radius: 50px;
+}
+
+.frame1{
+    margin-top: 50px;
+    background-image: url("../../../assets/images/badimalika.jfif");
+    background-size: cover;
+}
+.frame3{
+    margin-top: 50px;
+}

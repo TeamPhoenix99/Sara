@@ -1,0 +1,37 @@
+.nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 50px;
+   background-color: white;
+   font-size: 20px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+}
+
+.nav-left p span{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.nav-right a{
+    color: black;
+}
+
+.sign-btn{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.nav-right a.active-nav{
+   background-color: var(--primary-color);
+   color: white;
+   padding: 0px 10px;
+   border-radius: 10px;
+}

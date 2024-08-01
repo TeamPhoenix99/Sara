@@ -1,0 +1,41 @@
+.places{
+    display: flex;
+    margin: 50px;
+    gap: 20px;
+}
+.category{
+    margin-bottom: 50px;
+}
+.places img{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.star-icon{
+    color: var(--primary-color);
+}
+.view-btn{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.load-btn{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
