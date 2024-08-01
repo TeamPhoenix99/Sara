@@ -4,36 +4,26 @@ import {getData} from '../assets/data'
 
 export const StoreContext = createContext(null);
 
-export const StoreContextPrvider = (props) => {
+export const StoreContextProvider = (props) => {
 
     const [apiData,setApiData] = useState('')
-    const [places,setPlaces] = useState([])
-    const [activities,setActivities] = useState([])
 
     useEffect(()=>{
         
         const fetchData = async ()=> {
+             
             let data = await getData();
-            setApiData(data); 
-            data.map(()=>{
-                console.log(data);
-            })
+            setApiData(data);
         }
         fetchData()
-        // apiData.forEach(e =>{
-        //     if(e.type === 'place'){
-        //         setPlaces([...places, e]);
-        //     }
-        // })
         
+
     },[]);
-    
 
 
-
-    const conextValue = {apiData}
+    const contextValue = {apiData}
      return(
-        <StoreContext.Provider value={ conextValue }>
+        <StoreContext.Provider value={ contextValue }>
             {props.children}
         </StoreContext.Provider>
      )
