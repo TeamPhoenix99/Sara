@@ -1,3 +1,7 @@
 .search{
     margin: 30px 50px; 
 }
+.place-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
