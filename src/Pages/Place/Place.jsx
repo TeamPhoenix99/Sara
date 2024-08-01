@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { TopCategory } from '../../Components/TopCategory/TopCategory'
 import { Category } from '../../Components/Category/Category'
 import { CiSearch } from "react-icons/ci";
 import './Place.css'
 import chitwan from '../../assets/images/chitwan.jpg'
+import { StoreContext } from '../../contexts/StoreContext';
 
-export const Place = () => {
+export const Place = () => {  
+
+  const {apiData} = useContext(StoreContext); 
+
   return (
     <div>
       <TopCategory img={chitwan} Utext="Discover Destination" Ltext="With HolidayNepal"/>
