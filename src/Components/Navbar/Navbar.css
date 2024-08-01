@@ -2,26 +2,41 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 8vh;
+   height: 7vh;
    padding: 0 50px;
-   background-color: white;
+   background-color: var(--bg-color);
    font-size: 20px;
    position: sticky;
    top: 0;
    z-index: 1000;
+   font-size: 1.1rem;
+   color: var(--text-color);
+}
+
+.nav-left{
+    font-size: 1.5rem;
 }
 
 .nav-left p span{
-    color: var(--primary-color);
     font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
 }
+
 .nav-right{
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.nav-right a{
-    color: black;
+
+.nav-right p{
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.nav-right p:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color-primary);
 }
 
 .sign-btn{

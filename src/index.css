@@ -1,17 +1,26 @@
 :root{
     --primary-color: #fc8019;
     --primary-color-hover: #ff4d00;
+    --bg-color: #fff;
+    --text-color: #333333;
+    --text-color-highlight: #000; 
+    --text-color-primary: #fff;
 }
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Saira", sans-serif;
-    
+    transition: 0.2s ease-in-out;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
+
 button{
     border: none;
-    outline: none;
 }
 a{
     text-decoration: none;
