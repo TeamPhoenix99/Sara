@@ -1,4 +1,4 @@
-import { Form, Route, Routes } from "react-router-dom"
+import {Route, Routes } from "react-router-dom"
 import { Home } from "./Pages/Home/Home"
 import { Place } from "./Pages/Place/Place"
 import { Event } from "./Pages/Event/Event"
@@ -6,6 +6,7 @@ import { Activities } from "./Pages/Activities/Activities"
 import { Package } from "./Pages/Package/Package"
 import { Navbar } from "./Components/Navbar/Navbar"
 import { Footer } from "./Components/Footer/Footer"
+import Form from "./Components/Form/Form"
 
 
 function App() {
