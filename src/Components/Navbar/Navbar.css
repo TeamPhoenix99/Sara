@@ -11,7 +11,7 @@
    z-index: 1000;
    font-size: 1.1rem;
    color: var(--text-color);
-   z-index: 000;
+   z-index: 999;
 }
 
 .nav-left{
