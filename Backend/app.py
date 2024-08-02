@@ -32,7 +32,7 @@ events['type'] = 'events'
 activities = pd.read_excel('data/data.xlsx',sheet_name='Activities')
 activities['type']= 'activities'
 
-allData = places.to_dict(orient='records') + cities.to_dict(orient='records') + accommodation.to_dict(orient='records') + events.to_dict(orient='records') + activities.to_dict(orient='records')
+allData = places[1:].sort_values(by='rating', ascending=False).to_dict(orient='records') + cities.to_dict(orient='records') + accommodation.to_dict(orient='records') + events.to_dict(orient='records') + activities.sort_values(by='rating', ascending=False).to_dict(orient='records')
 
 @app.route("/data")
 def all_data():

@@ -15,3 +15,38 @@
     color: white;
     cursor: pointer;
  }
+
+ .day-desc{
+   display: flex;
+   flex-direction: column;
+   margin-top: 50px;
+ }
+
+ .dayNo{
+   text-decoration: underline var(--primary-color);
+   padding-bottom: -40px;
+ }
+
+ .plan{
+   margin-bottom: 40px;
+   height: 100px;
+ }
+
+.plan img{
+   border-radius: 20px;
+   width: 300px;
+   height: 200px;
+}
+
+.plan button{
+   padding: 5px 20px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.map{
+   position: fixed;
+   width: 40vw;
+   top: 7vh;
+   right: 0;
+}

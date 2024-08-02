@@ -4,8 +4,9 @@ import './Package.css'
 import { TripInfo } from '../../Components/OutputComponent/TripInf/TripInfo'
 import { Task } from '../../Components/OutputComponent/Task/Task'
 import { PackageLayout } from './PackageLayout'
+import { Map } from '../../Components/OutputComponent/Map/Map'
+import { FaStar } from "react-icons/fa";
 
-  
 
 export const Package = () => {
  
@@ -16,9 +17,6 @@ export const Package = () => {
   useEffect(()=>{
 
     const fetchPlan = async()=>{
-      // fetch("http://127.0.0.1:5000/plan?" + window.location.href.split('?')[1])
-      // .then((response) => response.json())
-      // .then((json) => {()=>setData(json)});
       let plan = await getPlan(window.location.href.split('?')[1])
       setData(plan)
       console.log(plan)
@@ -30,13 +28,50 @@ export const Package = () => {
   
   return (
     <div>
-       <PackageLayout/>
       <div className='info-btn'>
         <button value={showdetail} onClick={()=>setShowDetail('info')} className={showdetail === 'info' ? 'active-info':''}>Trip Info</button>
         <button value={showdetail} onClick={()=>setShowDetail('task')} className={showdetail === 'task' ? 'active-info':''}>Bookings</button>
       </div>
       {
-        showdetail === 'info' ? <TripInfo/> : <></>
+        showdetail === 'info' ? <>
+          
+            {
+              data.map((dailyTask, i)=>(
+                <>
+              <div className="day-desc">
+              <h1 className='dayNo'>Day {i +1}</h1>
+              {
+              dailyTask.map((task, index)=>(
+                <>
+                <div className="plan">
+                <img src={task.img} alt={`${task.task} image`} />
+                <div className="plan-desc">
+                  <h1>{task.task}</h1>
+                  <p>{task.time} hr.+</p>
+                  <div className="rating-view">
+                    <p>rs.{task.cost}00</p>
+                    <button>View more</button>
+                  </div>
+                </div>
+              </div>
+                </>
+              ))
+              }             
+            </div>
+            
+            </> 
+              ))
+            }
+            <div className="map">
+            <Map />
+          </div>
+          
+          
+     
+        
+        
+        
+        </> : <></>
       }
       {
         showdetail === 'task' ? <Task/> : <></>
