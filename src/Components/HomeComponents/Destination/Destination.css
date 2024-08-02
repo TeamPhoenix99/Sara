@@ -1,13 +1,13 @@
 /* css for Destination.jsx */
 .destination{
-    background-color: var(--bg-color-sec);
+    background-color: var(--bg-color-2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 80vw;
+    padding: 20px;
     border-radius: 50px;
-    padding: 2vh 0;
-    margin: 50px auto;
+    margin: 0px auto;
     overflow: hidden;
     position: relative;
 }

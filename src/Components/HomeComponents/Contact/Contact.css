@@ -1,8 +1,8 @@
 .contact{
     display: flex;
     justify-content: space-between;
-    margin: 50px 0;
-    background-color: var(--bg-color-sec);
+    background-color: var(--bg-color-2);
+    margin: 100px 110px;
     border-radius: 50px;
     padding:30px ;
 }
@@ -30,7 +30,7 @@
 .contact-right input, .contact-right textarea{
     border: none;
     border-radius: 1rem;
-    background: var(--bg-color-ter);
+    background: var(--bg-color-3);
     color: var(--text-color-highlight);
     font-size: 1rem;
     font-weight: 400;

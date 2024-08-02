@@ -1,8 +1,8 @@
 .review{
-    background-color: var(--bg-color-sec);
     padding: 30px;
     border-radius: 50px;
-    margin: 50px 0;
+    background-color: var(--bg-color-2);
+    margin: 100px 110px;
     position: relative;
 }
 .heading h1{
