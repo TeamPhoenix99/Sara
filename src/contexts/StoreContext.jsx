@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import {getData} from '../assets/data'
 
 
+
 export const StoreContext = createContext(null);
 
 export const StoreContextProvider = (props) => {

@@ -1,0 +1,127 @@
+/* css for Destination.jsx */
+.destination{
+    background-color: var(--bg-color-sec);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    border-radius: 50px;
+    padding: 2vh 0;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.destination .title, .title *{
+    font-size: 2rem;
+    margin: 2vh 0 3vh 3vw;
+    font-weight: 600;
+    color: var(--text-color-highlight);
+}
+
+
+.underline{
+    margin-left: 0;
+    text-decoration: underline var(--primary-color);
+    text-decoration-thickness: 3px;
+}
+
+.dest-container{
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    scrollbar-width: none; 
+}
+
+.dest-container::-webkit-scrollbar {
+    display: none; 
+}
+
+
+
+/* css for Eachplace.jsx */
+
+.each-place{
+    margin: 0 5px;
+    height: 70vh;
+    width: calc(100% - 2rem);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.image{
+    height: 80%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.image .view-more{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000a3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.each-place:hover .image .view-more{
+    opacity: 1;
+}
+
+
+.info{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.info h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color-highlight);
+}
+.info div{
+    display: flex;
+    align-items: center;
+}
+
+.star-i{
+    fill: var(--star-color);
+    margin:0 2px 0 10px;
+}
+
+.arrow{
+    position: absolute;
+    right: 0.4rem;
+    font-size: 2.5rem;
+    z-index: 1;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+    cursor: pointer;
+}
+
+.arrow:hover{
+    fill: var(--primary-color-hover);
+}
