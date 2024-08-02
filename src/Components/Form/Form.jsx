@@ -4,9 +4,12 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {MultiOptionSelector, SimpleOptionsSelector} from './OptionsInput';
 import { StoreContext } from '../../contexts/StoreContext';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Form = () => {
+  const navigate = useNavigate()
+
   const [date, setDate] = useState('');
   const [day, setDay] = useState('');
   const [budget, setBudget] = useState('');
@@ -78,9 +81,22 @@ export const Form = () => {
     }
   ]
 
-  const sendData = (data)=>{
-    console.log(data)
+  const urlArgs = (data)=>{
+    let str = ''
+    str = 'days=' + day + '&budget=' + budget + '&accommodation=' + accommodation + '&food=' + foods
+    places.forEach(e =>{
+      str += '&place='+e
+    })
+    themes.forEach(e =>{
+      str += '&type=' + e
+    })
+    activities.forEach(e =>{
+      str += '&activities=' + e
+    })
+
+    return str
   }
+
 
 
   const handleSubmit = (e) => {
@@ -91,28 +107,8 @@ export const Form = () => {
         return;
     }
 
-    const formData = {
-      date,
-      day,
-      budget,
-      places,
-      themes,
-      activities,
-      accommodation,
-      foods,
-    };
-
-    sendData(formData)
-    // console.log(formData)
-    
-    // setDate('');
-    // setDay('');
-    // setBudget('');
-    // setActivities([]);
-    // setTheme([]);
-    // setPlaces([]);
-    // setAccommodation('');
-    // setFoods('');
+    let args = urlArgs();
+    navigate('/package' + '?' +args)
   };
 
   return (
