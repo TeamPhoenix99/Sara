@@ -2,17 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100vh;
 }
 .main-left{
     width: 50%;
-    margin:100px 100px;
+    margin:10vh 5vw;
 }
 .main-desc p:nth-child(1){
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 2rem;
 }
 .main-desc h1{
-    font-size: 60px;
+    font-size: 4rem;
+    line-height: 5rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -20,17 +21,15 @@
     font-size: 17px;
    
 }
-.main-desc h1 {
-    margin-bottom: 20px;
-}
+
 .main-desc h1 span{
-    border-bottom: 3px solid var(--primary-color);
+    text-decoration: underline var(--primary-color);
 }
 
 .ai-btn{
-  margin-top: 40px;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: linear-gradient(to right, var(--bg-color) 0%, var(--primary-color) 15%);
   color: white;
   border-radius: 20px;
   font-size: 17px;
@@ -38,25 +37,43 @@
   cursor: pointer;
 }
 
+.ai-btn:hover{
+    padding: 10px 50px;
+}
+
+.ai-btn .sparkle-logo{
+    margin-right: 10px;
+    margin-bottom: -2px;
+}
+
 
 /* Css for Frames */
 .frames{
     margin-right: 50px;
     display: flex;
+    height: 70vh;
     gap: 20px;
-}
-.frame1,.frame2,.frame3,.frame4{
-   width: 80px;
-   height: 300px;
-   border: 1px solid black;
-   border-radius: 50px;
+    position: relative; 
+    z-index: 0;
 }
 
-.frame1{
-    margin-top: 50px;
-    background-image: url("../../../assets/images/badimalika.jfif");
+
+.frames > .child-frame {
+    height: 60vh;
+    width: 15vh;
+    border-radius: 10vh;
+    -webkit-mask: linear-gradient(#000 0 0);
+}
+  
+.frames > .child-frame:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: url("https://mountainlodgesofnepal.com/wp-content/uploads/2021/09/ex-moksha-disover-canyon-by-horse-1-e1631347570421.jpg"); 
+    background-repeat: no-repeat;
     background-size: cover;
 }
-.frame3{
-    margin-top: 50px;
+.frame1, .frame3{
+    margin-top: 5vh;
 }

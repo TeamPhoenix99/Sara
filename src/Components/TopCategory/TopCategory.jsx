@@ -9,7 +9,7 @@ export const TopCategory = ({img,Utext,Ltext}) => {
             <img src={img} alt="" />
         </div>
         <div className="category-desc">
-            <h1> {Utext} </h1>
+            <h1 className='colored'> {Utext} </h1>
             <h1> {Ltext} </h1>
         </div>
     </div>

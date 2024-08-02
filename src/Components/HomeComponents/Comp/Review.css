@@ -1,0 +1,98 @@
+.review{
+    background-color: var(--bg-color-sec);
+    padding: 30px;
+    border-radius: 50px;
+    margin: 50px 0;
+    position: relative;
+}
+.heading h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 4rem;
+    color: var(--text-color-highlight);
+}
+
+.underline{
+    font-weight: 600;
+    text-decoration-thickness: 3px;
+    color: var(--text-color-highlight);
+    text-decoration: underline var(--primary-color);
+}
+
+.single-review{
+    display: flex;  
+    gap: 30px;
+    position: relative;
+}
+
+
+.review-image{
+    height: 50vh;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.review-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rating{
+    display: flex;
+    gap: 20px;
+}
+.rating img{
+    width: 30px;
+    height: 30px;
+}
+.stars{
+    display: flex;
+}
+.star{
+    width: 25px;
+    height: 25px;
+}
+.star.fill{
+    fill: var(--primary-color);
+}
+.star.no-fill{
+    fill: var(--text-color);
+}
+.Desc p{
+    max-width: 50vw;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.Desc h1{
+    color: var(--text-color-highlight);
+    font-size: 1.5rem;
+}
+
+.slider{
+    gap: 20px;
+    position: absolute;
+    right: 5%;
+    bottom: 1%;
+    font-size: 3rem;
+}
+
+
+.slider .right-slider{
+    margin-left: 20px;
+    cursor: pointer;
+    fill: var(--primary-color);
+}
+
+.slider .right-slider:hover{
+    fill: var(--primary-color-hover);
+}
+
