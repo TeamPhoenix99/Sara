@@ -7,6 +7,7 @@ import { Package } from "./Pages/Package/Package"
 import { Navbar } from "./Components/Navbar/Navbar"
 import { Footer } from "./Components/Footer/Footer"
 import Form from "./Components/Form/Form"
+import { Output } from "./Pages/Output/Output"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
          <Route path="/activity" element={<Activities/>}/>
          <Route path="/package" element={<Package />}/>
          <Route path="/form" element={<Form />}/>
+         <Route path="/output" element={<Output/>}/>
       </Routes>
       <Footer/>
     </>
