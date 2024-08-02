@@ -22,3 +22,4 @@ export const Category = ({id, name, theme, rating,img}) => {
     </div>
   )
 }
+// this is a comment. holidaynepal is a ai integrated tpurismm
