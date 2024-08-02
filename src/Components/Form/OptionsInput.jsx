@@ -60,7 +60,7 @@ export const MultiOptionSelector = ({ label_text, given_options, onOptionsChange
               backgroundImage: `url(${e.image})`,
             }}
           >
-            <div className='black-box' style={{opacity:  options.includes(e.name) ? 0.8 : 0.5}}></div>
+            <div className='black-box' style={{opacity:  options.includes(e.name) ? 0.8 : ''}}></div>
 
             <p className='name'>{e.name}</p>
           </button>
@@ -132,7 +132,7 @@ export const SimpleOptionsSelector = ({ label_text, given_options, onOptionsChan
               backgroundImage: `url(${option.image})`,
             }}
           >
-            <div className='black-box' style={{opacity: selectedOption === option.name ? 0.8 : 0.5}}></div>
+            <div className='black-box' style={{opacity: selectedOption === option.name ? 0.8 : ''}}></div>
             <p className='name'>{option.name}</p>
           </button>
         ))}

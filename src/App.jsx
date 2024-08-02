@@ -24,8 +24,6 @@ function App() {
          <Route path="/activity" element={<Activities/>}/>
          <Route path="/package" element={<Package />}/>
          <Route path="/form" element={<Form />}/>
-         <Route path="/output" element={<Output/>}/>
-         <Route path="/packagelayout" element={<PackageLayout/>}/>
       </Routes>
       <Footer/>
     </>

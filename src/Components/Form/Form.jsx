@@ -5,6 +5,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {MultiOptionSelector, SimpleOptionsSelector} from './OptionsInput';
 import { StoreContext } from '../../contexts/StoreContext';
 import { useNavigate } from 'react-router-dom';
+import { IoIosChatbubbles } from "react-icons/io";
+
 
 
 export const Form = () => {
@@ -112,25 +114,26 @@ export const Form = () => {
   return (
     <form action="" onSubmit={handleSubmit}>
 
-      <div className="form-heading">
-        <h1>Plan your trip with Sara</h1>
-        <button className="chat-btn">Chat with Sara</button>
+      <h1>Plan your trip with Sara</h1>
+      <div className='chat-btn'>
+        <button>Chat with Sara < IoIosChatbubbles className='icon'/>
+        </button>
       </div>
 
       {/* Input Field */}
       <div className="input-field">
         <div className="text-input">
-          <label htmlFor="">Select dates</label>
+          <label htmlFor="">Select dates:</label>
           <DatePicker selected={date} onChange={(date) => setDate(date)} />
         </div>
 
         <div className="text-input">
-          <label htmlFor="">Budget</label>
+          <label htmlFor="">Budget:</label>
           <input required type="tel" value={budget} onChange={(e) => setBudget(e.target.value)} />
         </div>
 
         <div className="text-input">
-          <label htmlFor="">No of days</label>
+          <label htmlFor="">No of days:</label>
           <input required type="tel" value={day} onChange={(e) => setDay(e.target.value)} />
         </div>
       </div>

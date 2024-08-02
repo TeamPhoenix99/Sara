@@ -38,7 +38,7 @@
     position: absolute;
     top: 0;
 }
-.option-btn:hover .black-box{
+.option-btn:hover  .black-box{
     opacity: 0.8;
 }
 

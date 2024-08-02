@@ -51,7 +51,7 @@ export const Package = () => {
                     <h1>{task.task}</h1>
                     <p>{task.time} hr.+</p>
                     <div className="rating-view">
-                      <p>rs.{task.cost}00</p>
+                      <p>Rs.{task.cost}00</p>
                       <button>View more</button>
                     </div>
                   </div>
@@ -78,8 +78,7 @@ export const Package = () => {
         {
           showdetail === 'task' ? <Task/> : <></>
         }
-         <PackageLayout/>
-         <TripLayout/>
+         
       </div>
     )
   }

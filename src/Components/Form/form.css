@@ -8,9 +8,10 @@ form{
 .text-input{
     margin-bottom: 10px;    
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     width: max-content;
     align-items: center;
+    width: 310px;
 }
 
 input{
@@ -26,4 +27,18 @@ input{
     margin: 10px auto;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.chat-btn button{
+    position: absolute;
+    left: 770px;
+    width: 200px;
+    height:  50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.chat-btn button .icon{
+    margin-left: 10px;
 }
