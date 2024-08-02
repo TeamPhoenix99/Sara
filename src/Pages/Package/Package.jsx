@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { getPlan } from '../../assets/data'
+import './Package.css'
+import { TripInfo } from '../../Components/OutputComponent/TripInf/TripInfo'
+import { Task } from '../../Components/OutputComponent/Task/Task'
+import { PackageLayout } from './PackageLayout'
+
+  
 
 export const Package = () => {
  
   const [data, setData] = useState([])
+  const [showdetail, setShowDetail] = useState('info');
+
+
   useEffect(()=>{
 
     const fetchPlan = async()=>{
@@ -21,7 +30,17 @@ export const Package = () => {
   
   return (
     <div>
-      {console.log(data)}
+       <PackageLayout/>
+      <div className='info-btn'>
+        <button value={showdetail} onClick={()=>setShowDetail('info')} className={showdetail === 'info' ? 'active-info':''}>Trip Info</button>
+        <button value={showdetail} onClick={()=>setShowDetail('task')} className={showdetail === 'task' ? 'active-info':''}>Bookings</button>
+      </div>
+      {
+        showdetail === 'info' ? <TripInfo/> : <></>
+      }
+      {
+        showdetail === 'task' ? <Task/> : <></>
+      }
     </div>
   )
 }
