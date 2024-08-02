@@ -1,0 +1,12 @@
+.popup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+}
+.popup img{
+    height: 50px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+}

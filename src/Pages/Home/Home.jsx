@@ -1,13 +1,17 @@
 import React, { useContext } from 'react'
 import { Main } from '../../Components/HomeComponents/Main/Main'
-import { StoreContext } from '../../contexts/StoreContext'
+import { Destination } from '../../Components/HomeComponents/Destination/Destination';
+import { Review } from '../../Components/HomeComponents/Review/Review';
+import { Contact } from '../../Components/HomeComponents/Contact/Contact';
 
 export const Home = () => {
 
-  const { apiData } = useContext(StoreContext);
   return (
     <div>
         <Main/>
+        <Destination/>
+        <Review/>
+        <Contact/>
     </div>
   )
 }

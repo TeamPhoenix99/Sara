@@ -10,3 +10,8 @@
    border: 1px solid var(--primary-color);
    cursor: pointer;
 }
+.info-btn button.active-info{
+   background-color: var(--primary-color);
+   color: white;
+   cursor: pointer;
+}
