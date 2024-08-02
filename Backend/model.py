@@ -187,30 +187,30 @@ def give_plan(user_pref, no_of_plans = 1, city_df = cities, place_df = places, a
     tasks=[]
 
     for index, row in sorted_places_df[1:].iterrows():
+        print(row['name'])
         d = {}
         next_city = row['city_id']
         if(next_city != city):
             d = {
-                'type': 'travel',
-                'current_city_id': city,
-                'next_city_id' : next_city,
+                'task': 'Travel to ' + list(cities[cities['id'] == next_city]['name'])[0],
+                'id': next_city,
+                'img':list(cities[cities['id'] == 2]['image'])[0],
                 'time': get_transport_time_and_cost(city, next_city)[0],
-                'cost': get_transport_time_and_cost(city, next_city)[1]
+                'cost': round((get_transport_time_and_cost(city, next_city)[1])/80)
             }
             tasks.append(d)
             city = next_city
         
         d = {
-            'type': 'visit',
-            'place_id': row['id'],
+            'task': 'Visit '+row['name'],
+            'id': row['id'],
+            'img': row['image'],
             'time': row['required_time'] + city_df.loc[city_df['id'] == next_city]['traffic_time'].values[0],
-            'cost': row['required_time'] + city_df.loc[city_df['id'] == next_city]['traffic_cost'].values[0]
+            'cost': round((row['fee'] + city_df.loc[city_df['id'] == next_city]['traffic_cost'].values[0])/132)
         }
         tasks.append(d)
     result = [divide_activities(tasks, int(user_pref['days']))] 
     if no_of_plans > 1:
         result += give_plan(user_pref, no_of_plans-1)
     return result
-
-
 
