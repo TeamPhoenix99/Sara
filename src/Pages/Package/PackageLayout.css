@@ -1,0 +1,20 @@
+.packagelayout{
+    display: flex;
+    gap: 10px;
+    margin: 50px;
+    max-width: fit-content;
+}
+.packagelayout img{
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.package-desc h1{
+    font-weight: 800;
+    font-size: 20px;
+}
+.time-cost{
+    display: flex;
+    gap: 10px;
+}
