@@ -2,8 +2,8 @@ import React,{useContext, useState} from 'react'
 import { TopCategory } from '../../Components/TopCategory/TopCategory'
 import { Category } from '../../Components/Category/Category'
 import { CiSearch } from "react-icons/ci";
-import activitieshero from '../../assets/images/activityhero.jfif';
 import { StoreContext } from '../../contexts/StoreContext';
+import rifting from '../../assets/images/rifting.jpg'
 
 
 export const Activities = () => {
@@ -13,7 +13,7 @@ export const Activities = () => {
 
   return (
     <div>
-      <TopCategory img={activitieshero} Utext="Try Something New" Ltext="With HolidayNepal"/>
+      <TopCategory img={rifting} Utext="Embrese" Ltext="The Adventure Expedtion"/>
       <div className='search'>
         <h1>Activities</h1>
         <input type="text" placeholder='Enter activities'/>
@@ -23,7 +23,7 @@ export const Activities = () => {
         {
           apiData.filter((place, index )=>place.type === 'activities').map((place,index) => (
             <div key={index}>
-             { index<count ? <Category name={place.name} rating={place.rating} img={place.image} />: <></>}
+             { index<count ? <Category name={place.name} theme="" rating={place.rating} img={place.image} />: <></>}
             </div>
           ))
         }

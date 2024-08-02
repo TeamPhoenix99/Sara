@@ -1,0 +1,29 @@
+form{
+    margin: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-input{
+    margin-bottom: 10px;    
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    align-items: center;
+}
+
+input{
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 4px 10px;
+}
+
+.plan-btn{
+    width: max-content;
+    height: 50px;
+    padding: 0 50px;
+    margin: 10px auto;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './OptionsInput.css';
 
 export const MultiOptionSelector = ({ label_text, given_options, onOptionsChange }) => {
   const [options, setOptions] = useState([]);
@@ -51,26 +52,29 @@ export const MultiOptionSelector = ({ label_text, given_options, onOptionsChange
       <h2>{label_text}</h2>
       <div className="btns">
         {given_options.slice(0, 6).map((e, i) => (
-          <button
+          <button className='option-btn'
             type="button"
             key={i}
             onClick={() => handleActivities(e.name)}
             style={{
-              border: options.includes(e.name) ? '2px solid #000' : '',
               backgroundImage: `url(${e.image})`,
             }}
           >
-            {e.name}
+            <div className='black-box' style={{opacity:  options.includes(e.name) ? 0.8 : 0.5}}></div>
+
+            <p className='name'>{e.name}</p>
           </button>
         ))}
       </div>
       <div className="add-new">
+        <div className="box">
         <label>Add More Options: </label>
         <input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
         />
+        </div>
         {filteredOptions.length > 0 && (
           <ul className="suggestions-list">
             {filteredOptions.map((option, index) => (
@@ -88,7 +92,7 @@ export const MultiOptionSelector = ({ label_text, given_options, onOptionsChange
       <div className="selected-options">
         {options.map((option, index) => (
           <div key={index} className="tag">
-            {option}
+            <div className="name">{option}</div>
             <button onClick={() => handleTagRemove(option)} style={{ marginLeft: '5px', color: 'red' }}>
               &times;
             </button>
@@ -119,16 +123,17 @@ export const SimpleOptionsSelector = ({ label_text, given_options, onOptionsChan
       <h2>{label_text}</h2>
       <div className="btns">
         {given_options.map((option, index) => (
-          <button
+          <button className='option-btn'
             type="button"
             key={index}
             onClick={() => handleSelectOption(option.name)}
             style={{
-              border: selectedOption === option.name ? '2px solid #000' : '',
+            
               backgroundImage: `url(${option.image})`,
             }}
           >
-            {option.name}
+            <div className='black-box' style={{opacity: selectedOption === option.name ? 0.8 : 0.5}}></div>
+            <p className='name'>{option.name}</p>
           </button>
         ))}
       </div>

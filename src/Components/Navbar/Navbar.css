@@ -15,6 +15,7 @@
 
 .nav-left{
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .nav-left p span{
@@ -30,12 +31,11 @@
 .nav-btns{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-btns p{
     padding: 0 5px;
-    border-radius: 5px;
 }
 
 .nav-btns p {
@@ -79,5 +79,5 @@
    background-color: var(--primary-color);
    color: white;
    padding: 0px 10px;
-   border-radius: 10px;
+   border-radius: 20px;
 }

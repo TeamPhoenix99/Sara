@@ -103,11 +103,11 @@ def give_plan(user_pref, no_of_plans = 1, city_df = cities, place_df = places, a
 
         place_df.loc[i, 'score'] += len(set(place_df.iloc[i]['activities'].split(',')) & set(user_pref['activities'])) * fav_activity_scale
         place_df.loc[i, 'score'] += len(set(place_df.iloc[i]['name'].split(',')) & set(user_pref['places'])) * fav_place_scale
-        place_df.loc[i, 'score'] += len(set(place_df.iloc[i]['type'].split(',')) & set(user_pref['type'])) * type_scale
+        place_df.loc[i, 'score'] += len(set(place_df.iloc[i]['theme'].split(',')) & set(user_pref['type'])) * type_scale
         place_df.loc[i, 'score'] *= place_df.loc[i, 'rating']
 
     for i in range(len(accommodation_df)):
-        accommodation_df.loc[i, 'score'] += len(set(accommodation_df.iloc[i]['type'].split(',')) & set(user_pref['accommodation'])) * accommodation_type_scale
+        accommodation_df.loc[i, 'score'] += len(set(accommodation_df.iloc[i]['theme'].split(',')) & set(user_pref['accommodation'])) * accommodation_type_scale
         accommodation_df.loc[i, 'score'] += accommodation_cost_scale/accommodation_df.loc[i, 'cost']
         accommodation_df.loc[i, 'score'] *= accommodation_df.loc[i, 'popularity']
 

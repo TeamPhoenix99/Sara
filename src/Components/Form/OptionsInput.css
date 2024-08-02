@@ -1,0 +1,88 @@
+.btns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 900px;
+    gap: 20px;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.btns .option-btn{
+    width: calc(33%-10px);
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    font-weight: 300px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+.option-btn .name{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.option-btn .black-box{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+}
+.option-btn:hover .black-box{
+    opacity: 0.8;
+}
+
+.add-new .box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.suggestions-list{
+    list-style: none;
+}
+
+.suggestions-list li{
+    display: flex;
+    align-items: center;
+    padding:5px 20px;
+    margin: 5px;    
+    width: 220px;
+    background-color: var(--bg-color-2);
+}
+
+.selected-options .tag{
+    display: flex;
+    align-items: center;
+    margin: 5px;    
+    width: max-content;
+    background-color: var(--bg-color-2);
+}
+
+.tag .name{
+    padding: 5px 20px;
+}
+
+.tag button{
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-color-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.tag button:hover{
+    background-color: var(--bg-color-4);
+}

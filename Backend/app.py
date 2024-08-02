@@ -14,6 +14,14 @@ def hello_world():
 
 
 places = pd.read_excel('data/data.xlsx',sheet_name='Place')
+
+# Scale rating
+min_value = places['rating'].min()
+max_value = places['rating'].max()
+places['rating'] = ((places['rating'] - min_value) / (max_value - min_value)) * 1.5 + 3.4
+places['rating'] = places['rating'].apply(lambda x: round(x, 1))
+
+
 places['type'] = 'place'
 cities = pd.read_excel('data/data.xlsx',sheet_name='City')
 cities['type'] = 'city'
@@ -39,7 +47,7 @@ def plan():
         'activities': request.args.getlist('activities'),
         'places':request.args.getlist('places'),
         'accommodation': request.args.get('accommodation'),
-        'food': request.args.get('food')
+        'food': request.args.get('  ')
     }
     try:
         no_of_plans = int(request.args.get('no_of_plans'))
