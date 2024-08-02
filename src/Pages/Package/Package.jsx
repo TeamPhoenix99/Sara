@@ -15,9 +15,6 @@ export const Package = () => {
   useEffect(()=>{
 
     const fetchPlan = async()=>{
-      // fetch("http://127.0.0.1:5000/plan?" + window.location.href.split('?')[1])
-      // .then((response) => response.json())
-      // .then((json) => {()=>setData(json)});
       let plan = await getPlan(window.location.href.split('?')[1])
       setData(plan)
       console.log(plan)

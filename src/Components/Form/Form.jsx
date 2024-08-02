@@ -26,7 +26,7 @@ export const Form = () => {
 
   apiData.map((e)=>{
     if(e['type']=='place') places_options.push(e)
-    if(e['type']=='activities') places_options.push(e)
+    if(e['type']=='activities') activities_options.push(e)
   })
   console.log(typeof(apiData))
 

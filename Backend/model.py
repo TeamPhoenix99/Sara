@@ -209,8 +209,6 @@ def give_plan(user_pref, no_of_plans = 1, city_df = cities, place_df = places, a
             'cost': round((row['fee'] + city_df.loc[city_df['id'] == next_city]['traffic_cost'].values[0])/132)
         }
         tasks.append(d)
-    result = [divide_activities(tasks, int(user_pref['days']))] 
-    if no_of_plans > 1:
-        result += give_plan(user_pref, no_of_plans-1)
+    result = divide_activities(tasks, int(user_pref['days'])) 
     return result
 

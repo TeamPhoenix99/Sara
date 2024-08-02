@@ -11,9 +11,9 @@ export const Day = () => {
       <div className="day-desc">
         <h1 className='dayNo'>Day1</h1>
         <div className="plan">
-          <img src={chitwan} alt="" />
+          <img src="https://pix10.agoda.net/hotelImages/49694689/-1/33fea79ce6f9ab961b3c3977cf2dd990.jpg?ce=0&s=702x392" alt="" />
           <div className="plan-desc">
-            <h1>Visit Chitwan National National Park</h1>
+            <h1>Book Everent hotel</h1>
             <p>Historical</p>
             <div className="rating-view">
               <div className="rate">
