@@ -11,7 +11,6 @@ export const Output = () => {
   
   return (
     <div>
-      <TopCategory img={badimalika} Utext="" Ltext="" />
       <div className='info-btn'>
         <button value={showdetail} onClick={()=>setShowDetail('info')} className={showdetail === 'info' ? 'active-info':''}>Trip Info</button>
         <button value={showdetail} onClick={()=>setShowDetail('task')} className={showdetail === 'task' ? 'active-info':''}>Bookings</button>

@@ -8,6 +8,7 @@ import { Navbar } from "./Components/Navbar/Navbar"
 import { Footer } from "./Components/Footer/Footer"
 import Form from "./Components/Form/Form"
 import { Output } from "./Pages/Output/Output"
+import { PackageLayout } from "./Pages/Package/PackageLayout"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
          <Route path="/package" element={<Package />}/>
          <Route path="/form" element={<Form />}/>
          <Route path="/output" element={<Output/>}/>
+         <Route path="/packagelayout" element={<PackageLayout/>}/>
       </Routes>
       <Footer/>
     </>
