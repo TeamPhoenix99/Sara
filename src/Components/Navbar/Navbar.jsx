@@ -14,7 +14,8 @@ export const Navbar = () => {
         </div>
 
         <div className="nav-right">
-        <Link to="/" onClick={()=>setNavValue('home')} className={navValue === 'home' ? 'active-nav':''} >
+          <div className="nav-btns">
+          <Link to="/" onClick={()=>setNavValue('home')} className={navValue === 'home' ? 'active-nav':''} >
             <p>Home</p>
           </Link>
           <Link to="/place" onClick={()=>setNavValue('place')} className={navValue === 'place' ? 'active-nav':''} >
@@ -29,8 +30,8 @@ export const Navbar = () => {
           <Link to="/activity" onClick={()=>setNavValue('activity')} className={navValue === 'activity' ? 'active-nav':''} >
             <p>Activities</p>
           </Link>
-          
-          <p className='sign-btn'>SignUp</p>
+          </div>
+          <p className='sign-btn'>Login/SignUp</p>
         </div>
       </nav>
     </>

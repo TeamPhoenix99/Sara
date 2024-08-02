@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useState} from 'react'
 import { TopCategory } from '../../Components/TopCategory/TopCategory'
 import { Category } from '../../Components/Category/Category'
 import { CiSearch } from "react-icons/ci";
@@ -9,6 +9,7 @@ import { StoreContext } from '../../contexts/StoreContext';
 export const Activities = () => {
 
   const {apiData} = useContext(StoreContext);
+  const [count, setCount] = useState(10)
 
   return (
     <div>
@@ -20,13 +21,15 @@ export const Activities = () => {
         </div>
         <div className='place-grid'>
         {
-          apiData.map((place,index) => (
+          apiData.filter((place, index )=>place.type === 'activities').map((place,index) => (
             <div key={index}>
-             { place.type === 'activities' ? <Category name={place.name} rating={place.rating} img={place.image} /> : <></>}
+             { index<count ? <Category name={place.name} rating={place.rating} img={place.image} />: <></>}
             </div>
           ))
         }
         </div>
+        <button className='load-btn' onClick={()=>setCount((prevCount)=>prevCount+10)}>Load More</button>
+
     </div>
   )
 }

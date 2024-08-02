@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
-// import patan from '../../assets/images/patan.jfif'
+import patan from '../../assets/images/patan.jfif'
 import './Category.css'
 
 
