@@ -8,7 +8,6 @@ export const StoreContext = createContext(null);
 export const StoreContextProvider = (props) => {
     const [apiData,setApiData] = useState([])
     useEffect(()=>{
-
         const fetchData = async ()=> {
              
             let data = await getData();

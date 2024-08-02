@@ -14,7 +14,8 @@ export const getData = async () =>  {
 }
 
 export const getPlan = async (arguements) =>{
-    const url = "http://127.0.0.1:5000/data";
+    const url = "http://127.0.0.1:5000/plan?" + arguements;
+    console.log(url)
     try {
       const response = await fetch(url);
       if (!response.ok) {
