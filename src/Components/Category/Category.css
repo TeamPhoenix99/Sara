@@ -1,17 +1,33 @@
-.places{
-    display: flex;
-    margin: 50px;
-    gap: 20px;
-}
 .category{
     margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+    
 }
-.places img{
+
+.image{
     height: 250px;
     width: 200px;
+    overflow: hidden;
+}
+
+.image img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
+
+.place-desc h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color-highlight);
+}
+
+.place-desc .theme{
+    color: var(--text-color);
+}
+
 .rating{
     display: flex;
     align-items: center;

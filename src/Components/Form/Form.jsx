@@ -78,6 +78,11 @@ export const Form = () => {
     }
   ]
 
+  const sendData = (data)=>{
+    console.log(data)
+  }
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -85,7 +90,7 @@ export const Form = () => {
         alert('Please Number of days, date of your visit and your budget');
         return;
     }
-  
+
     const formData = {
       date,
       day,
@@ -97,15 +102,17 @@ export const Form = () => {
       foods,
     };
 
-    console.log('Form Data:', formData);
-    setDate('');
-    setDay('');
-    setBudget('');
-    setActivities([]);
-    setTheme([]);
-    setPlaces([]);
-    setAccommodation('');
-    setFoods('');
+    sendData(formData)
+    // console.log(formData)
+    
+    // setDate('');
+    // setDay('');
+    // setBudget('');
+    // setActivities([]);
+    // setTheme([]);
+    // setPlaces([]);
+    // setAccommodation('');
+    // setFoods('');
   };
 
   return (

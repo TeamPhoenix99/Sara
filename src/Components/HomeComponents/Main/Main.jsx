@@ -14,9 +14,8 @@ export const Main = () => {
         <div className="main-desc">
           <p >Your Guide</p>
           <h1>To <span className='un-line'>Travel </span> <br />and Explore Nepal </h1>
-          <p>HolidayNepal is a goto platform for all the travel enthusiast seeking to explore the glory of Nepal.
-            Using our versitile AI you can design  packages to your desire. 
-          </p>
+       
+            <p>Discover Nepal like never before with HolidayNepal <br />Your ultimate travel companion for unforgettable adventures.</p>
         </div>
         <button className='ai-btn' onClick={()=>navigate('/form')}><IoSparkles className='sparkle-logo'/> Create trip with AI</button>
       </div>

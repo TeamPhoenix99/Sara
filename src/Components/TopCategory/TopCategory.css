@@ -15,28 +15,28 @@
 
 .category-img img{
     position: absolute;
-    top: 0;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    min-width: 100%;
+    width: 100%;
     min-height: 100%;
+}
+
+.category-desc .colored{
+    color: var(--primary-color);
+    font-size: 4rem;
 }
 
 
 .category-desc{
     position: absolute;
-    bottom: 3vh;
+    bottom: 12vh;
     left: 5vw;
     color: white;
     text-shadow: 2px 2px 2px #000;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;  
-    line-height: 3rem;
+    line-height: 3.5rem;
 }
 
-.category-desc .colored{
-    color: var(--primary-color);
-    font-size: 3rem;
-
-}
 

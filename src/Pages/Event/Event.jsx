@@ -11,7 +11,7 @@ export const Event = () => {
 
   return (
     <div>
-       <TopCategory img="https://globalgreenews.com/wp-content/uploads/2024/03/holi-1-2.jpg" Utext="Enjoy Our Cultures" Ltext="With HolidayNepal" />
+       <TopCategory img="https://cdn.britannica.com/57/244757-050-CADDB530/Hindu-Holi-Festival-Mathura-Uttar-Pradesh-India.jpg" Utext="Vibrant" Ltext="Celebration of tradition" />
        <div className='search'>
         <h1>Events</h1>
         <input type="text" placeholder='Enter Events'  />
@@ -21,7 +21,7 @@ export const Event = () => {
         {
           apiData.map((place,index) => (
             <div key={index}>
-             { place.type === 'events' ? <Category name={place.name} rating={place.rating} img={place.image} /> : <></>}
+             { place.type === 'events' ? <Category name={place.name} theme={place.month} rating={place.rating} img={place.image} /> : <></>}
             </div>
           ))
         }
